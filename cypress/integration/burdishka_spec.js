@@ -5,5 +5,8 @@ describe('My first test using cypress', () => {
         cy.contains('cypress_01').click()
 
         cy.url().should('include', '/SergeiDemyanenko/cypress_01')
+
+        cy.xpath('//a[@title="README.md"]')
+            .should('have.length', 1)
     })
 })
